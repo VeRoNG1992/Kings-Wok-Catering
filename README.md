@@ -130,7 +130,7 @@
         <div class="hero-content">
             <h1>Authentisches Asia-Catering</h1>
             <p>Sushi, chinesische Klassiker & Live-Dim-Sum-Station<br>
-            Frisch aus Lieboch für Graz & Steiermark</p>
+            Frisch aus Graz Umgebung & Steiermark</p>
             <a href="#kontakt" class="btn">Jetzt unverbindlich anfragen</a>
         </div>
     </section>
@@ -184,9 +184,9 @@
     <section class="contact" id="kontakt">
         <h2>Kontakt & Anfrage</h2>
         <div class="contact-info">
-            <p><strong>Asia-Catering Lieboch</strong></p>
-            <p>8301 Lieboch, Steiermark</p>
-            <p>📞 0664 / XXX XXXX</p>
+            <p><strong>Asia-Catering Raaba</strong></p>
+            <p>8074 Raaba, Steiermark</p>
+            <p>📞 0660 / 55 10 694/p>
             <p>✉️ info@asia-catering-graz.at</p>
             <br>
             <p>Anfahrtsgebiet: Graz, Südsteiermark, Oststeiermark, Weststeiermark</p>
