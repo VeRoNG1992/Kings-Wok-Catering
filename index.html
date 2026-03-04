@@ -17,9 +17,88 @@
             color: #333;
         }
         
+        /* NAVIGATION */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+            padding: 10px 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: #E67E22;
+            margin: 0;
+            font-weight: 700;
+        }
+        
+        .logo-text span {
+            font-size: 0.85rem;
+            color: #8B4513;
+            font-weight: 500;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #E67E22;
+        }
+        
+        .nav-cta {
+            background: #E67E22;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        .nav-cta:hover {
+            background: #D35400;
+        }
+        
+        /* HERO SECTION */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://via.placeholder.com/1920x1080');
+                        url('https://via.placeholder.com/1920x1080/8B4513/fff?text=Dim+Sum+Live+Station');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -28,9 +107,11 @@
             justify-content: center;
             text-align: center;
             color: white;
+            margin-top: 0;
+            padding-top: 80px;
         }
         
-        .hero-content h1 {
+        .hero-content h2 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -44,28 +125,142 @@
         .btn {
             display: inline-block;
             padding: 15px 40px;
-            background: #C41E3A;
+            background: #E67E22;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.2rem;
-            transition: background 0.3s;
+            transition: all 0.3s;
+            border: 2px solid #E67E22;
         }
         
         .btn:hover {
-            background: #9A1830;
+            background: transparent;
+            color: white;
+            border-color: white;
         }
         
-        .packages {
-            padding: 80px 20px;
-            max-width: 1200px;
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #333;
+        }
+        
+        /* VORSTELLUNG SECTION */
+        .about {
+            padding: 100px 20px;
+            background: white;
+        }
+        
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-header {
+            margin-bottom: 50px;
+        }
+        
+        .about-header h2 {
+            font-size: 2.5rem;
+            color: #8B4513;
+            margin-bottom: 15px;
+        }
+        
+        .about-divider {
+            width: 80px;
+            height: 4px;
+            background: #E67E22;
             margin: 0 auto;
         }
         
-        .packages h2 {
-            text-align: center;
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .about-highlight {
+            background: #f9f9f9;
+            border-left: 4px solid #E67E22;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: left;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .about-highlight p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #333;
+            margin: 0;
+        }
+        
+        .about-signature {
+            margin-top: 30px;
+            font-weight: 600;
+            color: #8B4513;
+        }
+        
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .about-feature {
+            padding: 20px;
+        }
+        
+        .about-feature-icon {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .about-feature h4 {
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        
+        .about-feature p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* PACKAGES */
+        .packages {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f9f9f9;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
         }
         
         .package-grid {
@@ -75,145 +270,759 @@
         }
         
         .package-card {
+            background: white;
             border: 2px solid #eee;
             border-radius: 10px;
-            padding: 30px;
+            padding: 40px 30px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #E67E22;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        
+        .package-card:hover::before {
+            transform: scaleX(1);
         }
         
         .package-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 40px rgba(230,126,34,0.15);
+            border-color: #E67E22;
+        }
+        
+        .package-card.featured {
+            border-color: #E67E22;
+            transform: scale(1.05);
+        }
+        
+        .package-card.featured::before {
+            transform: scaleX(1);
+        }
+        
+        .package-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
         
         .package-card h3 {
-            color: #C41E3A;
+            color: #8B4513;
             font-size: 1.8rem;
             margin-bottom: 10px;
         }
         
         .price {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
-            color: #333;
+            color: #E67E22;
             margin: 20px 0;
         }
         
-        .contact {
-            background: #f9f9f9;
-            padding: 80px 20px;
-            text-align: center;
+        .price span {
+            font-size: 1rem;
+            color: #666;
+            display: block;
+            font-weight: normal;
         }
         
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
+        .package-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
         }
         
-        .contact-info {
-            font-size: 1.2rem;
-            line-height: 2;
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            padding-left: 25px;
+            position: relative;
         }
         
-        footer {
-            background: #333;
+        .package-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #E67E22;
+            font-weight: bold;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            background: #E67E22;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        
+        /* GALERIE */
+        .gallery {
+            padding: 100px 20px;
+            background: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            height: 280px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(230,126,34,0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(139,69,19,0.9));
+            color: white;
+            padding: 30px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* LIGHTBOX */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 5px;
+            border: 3px solid #E67E22;
+        }
+        
+        .lightbox-caption {
             color: white;
             text-align: center;
             padding: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 50px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: color 0.3s;
+        }
+        
+        .lightbox-close:hover {
+            color: #E67E22;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 50px;
+            cursor: pointer;
+            padding: 20px;
+            user-select: none;
+            transition: color 0.3s;
+        }
+        
+        .lightbox-nav:hover {
+            color: #E67E22;
+        }
+        
+        .lightbox-prev {
+            left: 20px;
+        }
+        
+        .lightbox-next {
+            right: 20px;
+        }
+        
+        /* CONTACT */
+        .contact {
+            background: #f9f9f9;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .contact-item {
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .contact-item:hover {
+            background: #E67E22;
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .contact-item:hover a {
+            color: white;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: left;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #E67E22;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 80px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #E67E22;
+        }
+        
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.2rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .package-card.featured {
+                transform: none;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 15px;
+                display: block;
+            }
+            
+            .about-text {
+                font-size: 1rem;
+            }
+            
+            .about-highlight {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Asia-Catering Lieboch Logo">
+                <div class="logo-text">
+                    <h1>Asia-Catering</h1>
+                    <span>Lieboch · Graz · Steiermark</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#ueber-uns">Über uns</a></li>
+                <li><a href="#pakete">Pakete</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#kontakt" class="nav-cta">Anfragen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Authentisches Asia-Catering</h1>
+            <h2>Authentisches Asia-Catering</h2>
             <p>Sushi, chinesische Klassiker & Live-Dim-Sum-Station<br>
-            Frisch aus Graz Umgebung & Steiermark</p>
-            <a href="#kontakt" class="btn">Jetzt unverbindlich anfragen</a>
+            Frisch aus unserer Küche in Lieboch für Graz & Steiermark</p>
+            <div>
+                <a href="#pakete" class="btn">Pakete entdecken</a>
+                <a href="#kontakt" class="btn btn-outline">Jetzt anfragen</a>
+            </div>
         </div>
     </section>
 
-    <!-- Packages -->
-    <section class="packages">
-        <h2>Unsere Pakete</h2>
+    <!-- VORSTELLUNG SECTION -->
+    <section class="about" id="ueber-uns">
+        <div class="about-container">
+            <div class="about-header">
+                <h2>Willkommen bei Asia-Catering Lieboch</h2>
+                <div class="about-divider"></div>
+            </div>
+            
+            <div class="about-text">
+                <p>
+                    Hinter Asia-Catering Lieboch steht ein traditionsreiches Restaurant in der Südsteiermark – seit Jahren bekannt für authentische asiatische Küche, die weit über das übliche "Austro-China" hinausgeht. Was als Familienbetrieb mit Leidenschaft für echte chinesische und japanische Speisen begann, erweitern wir nun mit unserem Catering-Service: Wir bringen frische Sushi, hausgemachte Dim Sum und chinesische Klassiker direkt zu Ihrem Event.
+                </p>
+                
+                <p>
+                    Unsere eigene Produktionsküche in Lieboch – direkt an der A2 gelegen – ermöglicht uns kurze Wege nach Graz und in die gesamte Steiermark. Hier bereiten wir täglich frisch zu, verzichten auf Fertigprodukte und setzen auf Qualität, die man schmeckt. Ob Hochzeit, Firmenfeier oder privater Geburtstag: Wir liefern nicht nur Essen, sondern ein Erlebnis.
+                </p>
+                
+                <div class="about-highlight">
+                    <p>
+                        "Das Besondere an unserem Catering ist die Live-Dim-Sum-Station. Wenn der Bambusdämpfer vor Ihren Gästen aufgeht und der Duft frischer Teigtaschen sich verbreitet – das ist der Moment, der ein Event unvergesslich macht."
+                    </p>
+                </div>
+                
+                <p>
+                    Wir kombinieren chinesische Küche mit japanischem Sushi-Handwerk – alles aus einer Hand, alles frisch zubereitet. Keine Zwischenhändler, keine Kompromisse. Nur echte asiatische Küche, serviert mit Professionalität und Herz.
+                </p>
+                
+                <p class="about-signature">
+                    Ihr Asia-Catering Team aus Lieboch
+                </p>
+            </div>
+            
+            <div class="about-features">
+                <div class="about-feature">
+                    <div class="about-feature-icon">🏆</div>
+                    <h4>Eigene Küche</h4>
+                    <p>Produktion in Lieboch, keine Fremdzulieferung</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">🚚</div>
+                    <h4>Schnelle Lieferung</h4>
+                    <p>Direkt an der A2 – Graz in 20 Minuten</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">👨‍🍳</div>
+                    <h4>Live-Cooking</h4>
+                    <p>Dim Sum & Teppanyaki vor Ort zubereitet</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">✅</div>
+                    <h4>Qualität</h4>
+                    <p>Frische Zutaten, HACCP-zertifiziert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="packages" id="pakete">
+        <div class="section-header">
+            <h2>Unsere Catering-Pakete</h2>
+            <p>Wählen Sie das passende Paket für Ihr Event – von der kleinen Firmenfeier bis zur großen Hochzeit</p>
+        </div>
+        
         <div class="package-grid">
             <div class="package-card">
+                <div class="package-icon">🍣</div>
                 <h3>Asia-Basic</h3>
-                <div class="price">42 €</div>
-                <p>pro Person</p>
-                <ul style="list-style: none; margin: 20px 0;">
-                    <li>✓ Maki & Inside-Out Sushi</li>
-                    <li>✓ 3 chinesische Kalt-Speisen</li>
-                    <li>✓ Edamame & Dessert</li>
-                    <li>✓ Lieferung bis 30 km</li>
+                <div class="price">
+                    42 €
+                    <span>pro Person</span>
+                </div>
+                <ul class="package-features">
+                    <li>Maki & Inside-Out Sushi</li>
+                    <li>3 chinesische Kalt-Speisen</li>
+                    <li>Edamame & Mochi-Dessert</li>
+                    <li>Lieferung bis 30 km inklusive</li>
+                    <li>Aufbau & Einweisung</li>
                 </ul>
-                <p style="color: #666; font-size: 0.9rem;">Min. 20 Personen</p>
+                <p style="color: #666; font-size: 0.9rem;">Mindestanzahl: 20 Personen</p>
             </div>
             
-            <div class="package-card" style="border-color: #C41E3A;">
-                <h3>Asia-Live ⭐</h3>
-                <div class="price">52 €</div>
-                <p>pro Person</p>
-                <ul style="list-style: none; margin: 20px 0;">
-                    <li>✓ Alles aus Basic</li>
-                    <li>✓ <strong>Dim Sum Live-Station</strong></li>
-                    <li>✓ Bambusdämpfer vor Ort</li>
-                    <li>✓ 1 Mitarbeiter inklusive</li>
+            <div class="package-card featured">
+                <div class="featured-badge">BELIEBT</div>
+                <div class="package-icon">🥟</div>
+                <h3>Asia-Live</h3>
+                <div class="price">
+                    52 €
+                    <span>pro Person</span>
+                </div>
+                <ul class="package-features">
+                    <li>Alles aus Asia-Basic</li>
+                    <li><strong>Dim Sum Live-Station</strong></li>
+                    <li>Bambusdämpfer vor Ort</li>
+                    <li>1 Mitarbeiter für Live-Cooking</li>
+                    <li>Interaktives Erlebnis für Gäste</li>
                 </ul>
-                <p style="color: #666; font-size: 0.9rem;">Min. 30 Personen</p>
+                <p style="color: #666; font-size: 0.9rem;">Mindestanzahl: 30 Personen</p>
             </div>
             
             <div class="package-card">
+                <div class="package-icon">🔥</div>
                 <h3>Asia-Premium</h3>
-                <div class="price">68 €</div>
-                <p>pro Person</p>
-                <ul style="list-style: none; margin: 20px 0;">
-                    <li>✓ Alles aus Live</li>
-                    <li>✓ <strong>Teppanyaki-Show</strong></li>
-                    <li>✓ Erweiterte Sushi-Auswahl</li>
-                    <li>✓ Premium-Service</li>
+                <div class="price">
+                    68 €
+                    <span>pro Person</span>
+                </div>
+                <ul class="package-features">
+                    <li>Alles aus Asia-Live</li>
+                    <li><strong>Teppanyaki-Show</strong></li>
+                    <li>Erweiterte Sushi-Auswahl</li>
+                    <li>Flambe & Show-Effekte</li>
+                    <li>Premium-Service vor Ort</li>
                 </ul>
-                <p style="color: #666; font-size: 0.9rem;">Min. 40 Personen</p>
+                <p style="color: #666; font-size: 0.9rem;">Mindestanzahl: 40 Personen</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact" id="kontakt">
-        <h2>Kontakt & Anfrage</h2>
-        <div class="contact-info">
-            <p><strong>Asia-Catering Raaba</strong></p>
-            <p>8074 Raaba, Steiermark</p>
-            <p>📞 0660 / 55 10 694/p>
-            <p>✉️ info@asia-catering-graz.at</p>
-            <br>
-            <p>Anfahrtsgebiet: Graz, Südsteiermark, Oststeiermark, Weststeiermark</p>
+    <!-- GALERIE -->
+    <section class="gallery" id="galerie">
+        <div class="section-header">
+            <h2>Impressionen</h2>
+            <p>Einblicke in unsere Catering-Events und Live-Stationen</p>
         </div>
-        <br>
-        <!-- Formular über Formspree (kostenlos) -->
-        <form action="https://formspree.io/f/DEINE_FORM_ID" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left;">
-            <input type="text" name="name" placeholder="Ihr Name" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
-            <input type="email" name="email" placeholder="E-Mail" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
-            <input type="tel" name="phone" placeholder="Telefon" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
-            <input type="date" name="date" placeholder="Event-Datum" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
-            <input type="number" name="guests" placeholder="Anzahl Personen" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
-            <select name="package" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
-                <option value="">Gewünschtes Paket</option>
-                <option value="basic">Asia-Basic</option>
-                <option value="live">Asia-Live</option>
-                <option value="premium">Asia-Premium</option>
-                <option value="unsure">Noch unsicher</option>
-            </select>
-            <textarea name="message" placeholder="Ihre Nachricht" rows="4" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;"></textarea>
-            <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Anfrage senden</button>
-        </form>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="bilder/dimsum-station.jpg" alt="Dim Sum Live-Station">
+                <div class="gallery-overlay">
+                    <h4>Dim Sum Live-Station</h4>
+                    <p>Frisch gedämpft vor Ihren Gästen</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="bilder/sushi-platte.jpg" alt="Sushi-Platte">
+                <div class="gallery-overlay">
+                    <h4>Frische Sushi-Platten</h4>
+                    <p>Lachs, Thunfisch & Avocado</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="bilder/kalt-speisen.jpg" alt="Chinesische Kalt-Speisen">
+                <div class="gallery-overlay">
+                    <h4>Chinesische Klassiker</h4>
+                    <p>Authentisch zubereitet</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="bilder/buffet-aufbau.jpg" alt="Buffet-Aufbau">
+                <div class="gallery-overlay">
+                    <h4>Professioneller Aufbau</h4>
+                    <p>Hochzeit in der Südsteiermark</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="bilder/gaeste-live.jpg" alt="Gäste an Live-Station">
+                <div class="gallery-overlay">
+                    <h4>Gäste erleben hautnah</h4>
+                    <p>Interaktives Catering-Erlebnis</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="bilder/kueche-lieboch.jpg" alt="Unsere Küche">
+                <div class="gallery-overlay">
+                    <h4>Unsere Produktionsküche</h4>
+                    <p>Eigene Küche in Lieboch</p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- KONTAKT -->
+    <section class="contact" id="kontakt">
+        <div class="section-header">
+            <h2>Kontakt & Anfrage</h2>
+            <p>Planen Sie ein Event? Wir erstellen Ihnen ein unverbindliches Angebot</p>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <a href="tel:+436641234567">0664 / 123 4567</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <a href="mailto:info@asia-catering-graz.at">info@asia-catering-graz.at</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <span>8301 Lieboch, Steiermark</span>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <form action="https://formspree.io/f/DEINE_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Ihr Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-Mail *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Event-Datum *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Anzahl Personen *</label>
+                    <input type="number" id="guests" name="guests" min="20" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="package">Gewünschtes Paket</label>
+                    <select id="package" name="package">
+                        <option value="">Bitte wählen</option>
+                        <option value="basic">Asia-Basic (42 €/Pers.)</option>
+                        <option value="live">Asia-Live (52 €/Pers.)</option>
+                        <option value="premium">Asia-Premium (68 €/Pers.)</option>
+                        <option value="unsure">Noch unsicher</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Nachricht / Besonderheiten</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">
+                    Anfrage senden
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2024 Asia-Catering Lieboch. Alle Rechte vorbehalten.</p>
-        <p><a href="impressum.html" style="color: #fff;">Impressum</a> | <a href="datenschutz.html" style="color: #fff;">Datenschutz</a></p>
+        <div class="footer-logo">
+            <img src="logo.jpg" alt="Asia-Catering Lieboch Logo">
+        </div>
+        <p><strong>Asia-Catering Lieboch</strong></p>
+        <p>Authentisches Asia-Catering für Graz & Steiermark</p>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="#pakete">Pakete</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+        <p style="margin-top: 20px; opacity: 0.8;">&copy; 2024 Asia-Catering Lieboch. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const galleryImages = [
+            { src: 'bilder/dimsum-station.jpg', caption: 'Dim Sum Live-Station – frisch gedämpft vor Ihren Gästen' },
+            { src: 'bilder/sushi-platte.jpg', caption: 'Frische Sushi-Platten mit Lachs, Thunfisch und Avocado' },
+            { src: 'bilder/kalt-speisen.jpg', caption: 'Authentische chinesische Kalt-Speisen' },
+            { src: 'bilder/buffet-aufbau.jpg', caption: 'Professioneller Buffet-Aufbau bei einer Hochzeit' },
+            { src: 'bilder/gaeste-live.jpg', caption: 'Gäste erleben die Zubereitung hautnah' },
+            { src: 'bilder/kueche-lieboch.jpg', caption: 'Unsere professionelle Produktionsküche in Lieboch' }
+        ];
+
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            updateLightbox();
+        }
+
+        function updateLightbox() {
+            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex].src;
+            document.getElementById('lightbox-caption').textContent = galleryImages[currentImageIndex].caption;
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (!document.getElementById('lightbox').classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'ArrowRight') changeImage(1);
+        });
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
